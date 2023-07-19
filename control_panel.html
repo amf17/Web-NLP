@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title> Control Panel</title>
+
+        <style>
+            body {
+                background-color: #000000;
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                }
+
+                form {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 10px;
+                    justify-items: center;
+                    align-items: center;
+                }
+
+                input[type="submit"] {
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #007BFF;
+                    color: rgb(182, 183, 224);
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+
+                input[type="submit"]:hover {
+                    background-color: #1d3650;
+                }
+
+                input[value="forward"] {
+                    grid-column: 2;
+                    grid-row: 1;
+                }
+
+                input[value="left"] {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+
+                input[value="stop"] {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+
+                input[value="right"] {
+                    grid-column: 3;
+                    grid-row: 2;
+                }
+
+                input[value="backward"] {
+                    grid-column: 2;
+                    grid-row: 3;
+                }
+        </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    </head>
+
+<body>
+
+    <form  method="post" action="save.php" >
+
+        <input type="submit" name="button" value="right">
+        <input type="submit" name="button" value="left"> 
+        <input type="submit" name="button" value="forward">
+        <input type="submit" name="button" value="backward">
+        <input type="submit" name="button" value="stop">
+    </form>
+    
+</body>
+</html>
