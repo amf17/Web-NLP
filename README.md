@@ -139,19 +139,7 @@ The control panel is designed to be visually appealing and functional, but witho
 
 The provided code is a PHP script that handles the form submission from the HTML control panel and interacts with a MySQL database.
 
-Here's what the code does:
-
-1. It sets up the database connection using the provided server name, username, password, and database name.
-2. If the connection to the database fails, it displays an error message and stops the script.
-3. It retrieves the value of the clicked button from the `$_POST` superglobal array and assigns it to the `$data` variable.
-4. It constructs an SQL query to insert the `$data` value into the `robot_movement` table.
-5. If the SQL query is executed successfully, it echoes "New record created successfully." Otherwise, it displays an error message.
-6. It constructs another SQL query to select the `robot_movement` column from the `robot_movement` table, ordering the results in descending order and limiting the result to one row.
-7. It executes the SQL query and checks if there are any rows returned.
-8. If there are rows returned, it starts a session and assigns the value of the `robot_movement` column from the last inserted row to the `$_SESSION["lastInsertedValue"]` variable.
-9. If no rows are returned, it echoes "No results."
-10. It closes the database connection.
-11. It redirects the user to the "Display_12.php" page.
+php code to store directions on the database when one of the five buttons is clicked. Image showing the database after clicking on the buttons:
 
 ![image](https://github.com/amf17/Web-NLP/assets/139582388/5c8f0704-fa1e-4a6a-a6ee-13b810d8efc7)
 
@@ -189,16 +177,9 @@ Here's what the code does:
 ```
 The provided code is a PHP script that starts a session and displays the last inserted value from the `$_SESSION["lastInsertedValue"]` variable in an HTML page.
 
-Here's how the code works:
-
-1. The script starts a session using `session_start()`. This is required to access session variables.
-2. The rest of the code is an HTML document.
-3. The `<title>` tag sets the title of the page to "Display Page."
-4. The CSS styles in the `<style>` tags define the appearance of the page. It sets a light gray background color for the body, uses the Arial font, and centers the content vertically and horizontally.
-5. The `<p>` tag is used to display the last inserted value. It has a font size of 24 pixels and a dark gray color.
-6. Inside the `<p>` tag, a PHP code block is used to echo the value of `$_SESSION["lastInsertedValue"]`. This will display the last inserted value from the previous script execution.
-
 To use this code, make sure that the previous script has been executed and the `$_SESSION["lastInsertedValue"]` variable is set correctly. When you access the "Display Page," it will show the value stored in the session variable.
+
+php code that retrieves the last direction stored in the database.
 ![image](https://github.com/amf17/Web-NLP/assets/139582388/1bab8b74-8cc0-4993-8b72-5c17c57c5706)
 
 
