@@ -180,6 +180,8 @@ The provided code is a PHP script that starts a session and displays the last in
 To use this code, make sure that the previous script has been executed and the `$_SESSION["lastInsertedValue"]` variable is set correctly. When you access the "Display Page," it will show the value stored in the session variable.
 
 php code that retrieves the last direction stored in the database.
+
+
 ![image](https://github.com/amf17/Web-NLP/assets/139582388/1bab8b74-8cc0-4993-8b72-5c17c57c5706)
 
 
