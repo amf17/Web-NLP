@@ -156,6 +156,49 @@ Here's what the code does:
 ![image](https://github.com/amf17/Web-NLP/assets/139582388/5c8f0704-fa1e-4a6a-a6ee-13b810d8efc7)
 
 ## third file Display_12
+```
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Display Page</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        p {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Last inserted value: <?php echo $_SESSION["lastInsertedValue"]; ?></p>
+</body>
+</html>
+```
+The provided code is a PHP script that starts a session and displays the last inserted value from the `$_SESSION["lastInsertedValue"]` variable in an HTML page.
+
+Here's how the code works:
+
+1. The script starts a session using `session_start()`. This is required to access session variables.
+2. The rest of the code is an HTML document.
+3. The `<title>` tag sets the title of the page to "Display Page."
+4. The CSS styles in the `<style>` tags define the appearance of the page. It sets a light gray background color for the body, uses the Arial font, and centers the content vertically and horizontally.
+5. The `<p>` tag is used to display the last inserted value. It has a font size of 24 pixels and a dark gray color.
+6. Inside the `<p>` tag, a PHP code block is used to echo the value of `$_SESSION["lastInsertedValue"]`. This will display the last inserted value from the previous script execution.
+
+To use this code, make sure that the previous script has been executed and the `$_SESSION["lastInsertedValue"]` variable is set correctly. When you access the "Display Page," it will show the value stored in the session variable.
 ![image](https://github.com/amf17/Web-NLP/assets/139582388/1bab8b74-8cc0-4993-8b72-5c17c57c5706)
 
 
